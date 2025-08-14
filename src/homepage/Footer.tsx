@@ -43,16 +43,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Support */}
-        <div>
-          <h3 className="font-bold mb-4">Support</h3>
-          <ul className="space-y-2 text-sm">
-            <li><a href="#">Get In Touch</a></li>
-            <li><a href="#">FAQ's</a></li>
-            <li><a href="#">Community</a></li>
-            <li><a href="#">Knowledgebase</a></li>
-          </ul>
-        </div>
+    
 
         {/* Address */}
         <div>
