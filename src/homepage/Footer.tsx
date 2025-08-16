@@ -9,8 +9,7 @@ export default function Footer() {
         {/* Left Logo + Tagline */}
         <div className="md:col-span-2">
           <div className="flex items-center gap-2 mb-4">
-            <img src="/arc.png" alt="Aicademy" className="h-10" />
-            <span className="text-2xl font-bold">Aicademy</span>
+            <img src="/edearn-logo.png" alt="Aicademy" className="h-10" />
           </div>
           <p className="text-2xl text-gray-700 leading-snug">
             Explore the World of <br />
@@ -47,11 +46,12 @@ export default function Footer() {
 
         {/* Address */}
         <div>
-          <h3 className="font-bold mb-4">Address:</h3>
-          <p className="text-sm mb-4">930 Palma Lane Suite 500 Larkinhaven</p>
+          <h3 className="font-bold mb-2">Address:</h3>
+          <p className="text-sm mb-2">Surya Nagar, Ranchi</p>
           <h3 className="font-bold mb-2">Contact:</h3>
-          <p className="text-sm text-blue-600"><a href="tel:4749378270">474 - 937-8270</a></p>
-          <p className="text-sm"><a href="mailto:hello@yoursite.com">hello@yoursite.com</a></p>
+          <p className="text-sm text-blue-600"><a href="tel:4749378270">+91 797-9776-470</a></p>
+          <p className="text-sm text-blue-600"><a href="tel:4749378270">+91 637-2753-095</a></p>
+          <p className="text-sm"><a href="mailto:info@ed-earn.in">info@ed-earn.in</a></p>
         </div>
       </div>
 

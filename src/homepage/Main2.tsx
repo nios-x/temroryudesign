@@ -5,8 +5,8 @@ export default function Main2() {
     <div className="min-h-[60vh] flex flex-col items-center overflow-hidden">
       {/* Heading */}
       <div className="block p-6">
-        <div className="bg-gradient-to-bl w-max h-max mt-4 py-3 px-5 rounded-full from-[#dbfff8] to-[#edffd6]">
-          We Work With
+        <div className="bg-gradient-to-bl w-max h-max mt-4 py-3 px-5 rounded-full from-[#141e30] to-[#35577d] text-white">
+          Our students work at...
         </div>
       </div>
 
