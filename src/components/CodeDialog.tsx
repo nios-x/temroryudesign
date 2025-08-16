@@ -7,16 +7,20 @@ import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
 import js from "react-syntax-highlighter/dist/esm/languages/hljs/javascript";
 import python from "react-syntax-highlighter/dist/esm/languages/hljs/python";
 import cpp from "react-syntax-highlighter/dist/esm/languages/hljs/cpp";
-import swift from "react-syntax-highlighter/dist/esm/languages/hljs/swift";
+import rust from "react-syntax-highlighter/dist/esm/languages/hljs/rust";
+import c from "react-syntax-highlighter/dist/esm/languages/hljs/c";
+import ruby from "react-syntax-highlighter/dist/esm/languages/hljs/ruby";
 import { atomOneLight } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 // Register languages
 SyntaxHighlighter.registerLanguage("javascript", js);
 SyntaxHighlighter.registerLanguage("python", python);
-SyntaxHighlighter.registerLanguage("swift", swift);
+SyntaxHighlighter.registerLanguage("swift", rust);
 SyntaxHighlighter.registerLanguage("cpp", cpp);
+SyntaxHighlighter.registerLanguage("c", c);
+SyntaxHighlighter.registerLanguage("ruby", ruby);
 
-const languages = ["javascript", "python", "swift"] as const;
+const languages = ["javascript", "python", "ruby"] as const;
 type Language = (typeof languages)[number];
 
 const snippets = (lang: Language, isMobile: boolean): string => {
@@ -80,62 +84,39 @@ const snippets = (lang: Language, isMobile: boolean): string => {
 }`;
   }
 
-  if (lang === "swift") {
+  if (lang === "ruby") {
     return isMobile
-      ? `struct Developer {
-    let name: String
-    let skills: [String]
-    let passionate: Bool
-    let problemSolver: Bool
-    let creative: Bool
-  
-    func hireable() -> Bool {
-      return passionate &&
-             problemSolver &&
-             creative
-    }
-  }
-  
-  let dev = Developer(
-    name: "EdEarn Scholar!",
-    skills: [
-    "JavaScript",
-    "Swift",
-    "Python"
-  ]
-    passionate: true,
-    problemSolver: true,
-    creative: true
-  )
-  
-  print("Hireable:", dev.hireable())`
-      : `struct Developer {
-    let name: String
-    let skills: [String]
-    let passionate: Bool
-    let problemSolver: Bool
-    let creative: Bool
-  
-    func hireable() -> Bool {
-      return passionate && problemSolver && creative
-    }
-  }
-  
-  let dev = Developer(
-    name: "EdEarn Scholar!",
-    skills: [
-    "JavaScript",
-    "Swift",
-    "Python"
-  ],
-    passionate: true,
-    problemSolver: true,
-    creative: true
-  )
-  
-  print("Hireable:", dev.hireable())`;
-  }
+      ? `class Developer
+  def initialize
+    @name = "EdEarn Scholar!"
+    @skills = ["Ruby", "JavaScript", "Python"]
+    @passionate = true
+    @problem_solver = true
+    @creative = true
+  end
 
+  def hireable?
+    @passionate && @problem_solver && @creative
+  end
+end
+
+dev = Developer.new
+puts "Hireable: #{dev.hireable?}"`
+      : `class Developer
+  def initialize
+    @name = "EdEarn Scholar!"
+    @skills = ["Ruby", "JavaScript", "Python"]
+    @passionate = true
+    @problem_solver = true
+    @creative = true
+  end
+  def hireable?
+    @passionate && @problem_solver && @creative
+  end
+end
+dev = Developer.new
+puts "Hireable: #{dev.hireable?}"`;
+  }
   return "";
 };
 
@@ -192,7 +173,7 @@ export default function CodeDialog() {
 
   return (
     <Card
-      className="bg-[#0b1120] border border-zinc-800 p-4 rounded-lg shadow-md w-full max-w-full w-[650px] h-[500px] mt-4 overflow-hidden"
+      className="bg-[#0b1120] border border-zinc-800 p-4 rounded-lg shadow-md w-full max-w-full w-[630px] h-[480px] ml-8 mt-6 overflow-hidden"
       style={{
         fontFamily: "'Bookman Old Style', 'Times New Roman', Georgia, serif",
         overflowX: "hidden", // hide horizontal overflow
