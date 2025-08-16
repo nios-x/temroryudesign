@@ -6,18 +6,18 @@ import { Card } from "./ui/card";
 import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
 import js from "react-syntax-highlighter/dist/esm/languages/hljs/javascript";
 import python from "react-syntax-highlighter/dist/esm/languages/hljs/python";
-import cpp from "react-syntax-highlighter/dist/esm/languages/hljs/cpp";
-import rust from "react-syntax-highlighter/dist/esm/languages/hljs/rust";
-import c from "react-syntax-highlighter/dist/esm/languages/hljs/c";
+// import cpp from "react-syntax-highlighter/dist/esm/languages/hljs/cpp";
+// import rust from "react-syntax-highlighter/dist/esm/languages/hljs/rust";
+// import c from "react-syntax-highlighter/dist/esm/languages/hljs/c";
 import ruby from "react-syntax-highlighter/dist/esm/languages/hljs/ruby";
 import { atomOneLight } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 // Register languages
 SyntaxHighlighter.registerLanguage("javascript", js);
 SyntaxHighlighter.registerLanguage("python", python);
-SyntaxHighlighter.registerLanguage("swift", rust);
-SyntaxHighlighter.registerLanguage("cpp", cpp);
-SyntaxHighlighter.registerLanguage("c", c);
+// SyntaxHighlighter.registerLanguage("swift", rust);
+// SyntaxHighlighter.registerLanguage("cpp", cpp);
+// SyntaxHighlighter.registerLanguage("c", c);
 SyntaxHighlighter.registerLanguage("ruby", ruby);
 
 const languages = ["javascript", "python", "ruby"] as const;
