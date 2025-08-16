@@ -2,7 +2,7 @@
 import { AvatarDemo } from "../components/ui/avatars2"
 import { Button } from "../components/ui/button"
 import { Input } from "../components/ui/input"
-
+import CodeDialog from "../components/CodeDialog"
 
 export default function Main1() {
     return (
@@ -12,7 +12,7 @@ export default function Main1() {
         </div> */}
             <main className="min-h-screen bg-gradient-to-bl from-[#f0fffc] to-[#f9fff1] ">
                 <div className="p-6   flex justify-between">
-                    <img src="/arc.png" alt="" className="h-10  " />
+                    <img src="/edearn-logo.png" alt="" className="h-10 mt-3 " />
                     <div className="w-max flex gap-8 pt-5 ">
                         {
                             ["Home", "About Us", "Learn", "Curriculums", "Blog", "Community", "Contact Us"].map(e => {
@@ -34,25 +34,25 @@ export default function Main1() {
                         <div className=" text-7xl">Learn to code,</div>
                         <div className=" text-7xl">earn as YOU learn!</div>
                     </div>
-                    <div className=" text-2xl max-w-1/2 pt-5">Master coding skills with our comprehensive learning platform. Start your journey today and build a successful career in tech.</div>
-                    <div className="absolute top-[5%] right-[35%]" >
+                    <div className=" text-2xl max-w-1/2 pt-5 ml-[-2px]">Master coding skills with our comprehensive learning platform. Start your journey today and build a successful career in tech.</div>
+                    {/* <div className="absolute top-[5%] right-[35%]" >
                         <img src="/wave.png" alt="" className="h-20  " />
-                    </div>
-                    <div className="pt-12 flex gap-3">
+                    </div> */}
+                    <div className="pt-12 flex gap-3 ml-[-7px]">
                         <Input className="w-90 mt-2 bg-white p-5" placeholder="Look up a topic : React, Android, AI, Docker etc." />
                         <Button className="bg-[#00725c]  font-bold rounded-full px-7 py-5 mt-2 ">
                             Dive In!
                         </Button>
                     </div>
                     <div className="flex items-center pl-3">
-
                         <AvatarDemo />
                         <div className="pt-10 pl-2 ">
-
                             Trusted By 127k+ Students
                         </div>
                     </div>
-
+                    <div className="pt-10 mt-[-530px] ml-183">
+                        <CodeDialog />
+                    </div>
 
                 </div>
 
