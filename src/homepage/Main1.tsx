@@ -83,10 +83,10 @@ export default function Main1() {
           {/* Search Input + Eye Button */}
           <div className="pt-12 flex gap-3 ml-[-7px] items-center">
             <Input
-              className="w-96 mt-2 bg-white p-5"
+              className="w-88 mt-2 bg-white p-5"
               placeholder="Look up a topic : React, Android, AI, Docker etc."
             />
-            <Button className="relative border-[#00725c] hover:text-white hover:scale-110 text-black border bg-transparent font-bold rounded-full px-7 py-5 mt-2 flex items-center gap-2 transition">
+            <Button className="relative border-[#00725c] hover:text-white hover:scale-110 text-black border cursor-pointer bg-transparent font-bold rounded-full px-5 py-5 mt-2 ml-2 flex items-center gap-2 transition">
               Dive In!
               {/* Eye container */}
               <div
@@ -125,7 +125,7 @@ export default function Main1() {
           </div>
 
           {/* CodeDialog floating */}
-          <div className="pt-10 absolute top-10 right-40">
+          <div className="pt-10 ml-180 mt-[-525px]">
             <CodeDialog />
           </div>
         </div>

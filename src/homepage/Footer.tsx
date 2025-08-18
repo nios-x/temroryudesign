@@ -5,15 +5,15 @@ export default function Footer() {
   return (
     <footer className="bg-white border-gray-200">
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-5 gap-10">
-        
+
         {/* Left Logo + Tagline */}
         <div className="md:col-span-2">
           <div className="flex items-center gap-2 mb-4">
             <img src="/edearn-logo.png" alt="Aicademy" className="h-10" />
           </div>
           <p className="text-2xl text-gray-700 leading-snug">
-            Explore the World of <br />
-            Artificial Intelligence.
+            Explore the world of <br />
+            technology and innovation with EdEarn.
           </p>
         </div>
 
@@ -23,8 +23,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li><a href="#">About</a></li>
             <li className="flex items-center gap-2">
-              <a href="#">Career</a>
-              <span className="bg-teal-500 text-white text-[10px] px-2 py-[2px] rounded-full">New</span>
+              <a href="#">Careers</a>
             </li>
             <li><a href="#">Events</a></li>
             <li><a href="#">Webinars</a></li>
@@ -42,7 +41,7 @@ export default function Footer() {
           </ul>
         </div>
 
-    
+
 
         {/* Address */}
         <div>
